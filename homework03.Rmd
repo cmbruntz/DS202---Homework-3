@@ -1,0 +1,61 @@
+---
+title: 'Homework 3'
+author: "Caitlyn Bruntz"
+date: "2/16/2022"
+output: html_document
+---
+Team members, and their github repository links: Caitlyn Bruntz - https://github.com/cmbruntz/DS202---Homework-3
+
+
+Successful pull requests made:
+Github repository to which you requested a change:
+Pull requests accepted:
+Github repository from which accepted:
+
+
+```{r}
+library(tidyverse)
+```
+#Reading the Data
+```{r}
+life5060 <- read.csv("https://raw.githubusercontent.com/yumouqiu/DS202-Spring2023/main/Lecture1_collaborative-environment/data/gapminder-5060.csv")
+head(life5060)
+dim(life5060)
+```
+#Canada Values
+```{r}
+canada <- life5060 %>% filter(country == "Canada")
+head(canada)
+dim(canada)
+```
+#Canada Visualization
+```{r}
+canada1 <- life5060[life5060$country == "Canada", ]
+head(canada1)
+dim(canada1)
+```
+#Fix Value
+```{r}
+canada %>% 
+  ggplot(aes(x = year, y = lifeExp)) +
+  geom_line()
+```
+#Visualize Fixed Data
+```{r}
+canada %>% filter(year == 1957)
+canada_fixed <- canada %>% mutate(
+  lifeExp = replace(lifeExp, year==1957, 69.96)  
+)
+canada_fixed
+```
+#Stretch
+```{r}
+canada_fixed %>% ggplot(aes(x = year, y = lifeExp)) +
+  geom_line()
+```
+#Plot Final
+```{r}
+plot(x = canada_fixed$year, y = canada_fixed$lifeExp, 
+     type = 'l', xlab = "year", ylab = "lifeExp")
+```
+
