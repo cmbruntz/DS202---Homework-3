@@ -4,14 +4,18 @@ author: "Caitlyn Bruntz"
 date: "2/16/2022"
 output: html_document
 ---
-Team members, and their github repository links: Caitlyn Bruntz - https://github.com/cmbruntz/DS202---Homework-3
+Team members, and their github repository links: Caitlyn Bruntz - https://github.com/cmbruntz/DS202---Homework-3, https://github.com/bruntz-cm/DS202---Homework-3
 
 
-Successful pull requests made:
-Github repository to which you requested a change:
-Pull requests accepted:
-Github repository from which accepted:
+Successful pull requests made: one
+Github repository to which you requested a change: bruntz-cm
+Pull requests accepted: one
+Github repository from which accepted: cmbruntz
 
+Tips for making GitHub easier:
+  1. Document who is going to work on what and when
+  2. Utilize clear and simple naming systems for files
+  3. Work to reduce the number of times pull requests and merges need to be made
 
 ```{r}
 library(tidyverse)
@@ -90,3 +94,15 @@ canada_fixed %>%
   geom_line(data = life5060 %>% 
               filter(country %in% c("United States", "Australia")))
 ```
+Data science includes the following:
+1. Data collection
+2. Analyses
+3. Statistical tests
+4. Machine learning and programming
+
+For example, to find the number of goals it would take for a soccer team to have a 1.0 percent winning season, data can first be collected from their league. Then, analyses and statistical tests such as correlation and ANOVA can be done. Then, regression models could be constructed to determine the how many goals would be needed for a team to have an undefeated season.
+
+This would be considered data science as it follows the standard procedure of analzying data outlined in the list above. To be considered data science, though, a project does not necessarily have to include all of points 2-4. The data may be collected and then either analyzed, statistically tested, or modeled. 
+
+
+![Alt text](https://storage.googleapis.com/techsauce-prod/ugc/uploads/2021/3/1200_630_Data-Football_1200x630.jpg)
