@@ -59,3 +59,34 @@ plot(x = canada_fixed$year, y = canada_fixed$lifeExp,
      type = 'l', xlab = "year", ylab = "lifeExp")
 ```
 
+#Add after fork
+
+```{r}
+canada_fixed %>% 
+  ggplot(aes(x = year, y = lifeExp, group=country)) + geom_line() +
+  geom_line(data = life5060 %>% 
+              filter(country %in% c("United States", "Australia")))
+```
+
+```{r}
+canada_fixed %>% 
+  ggplot(aes(x = year, y = lifeExp, group=country)) + geom_line() +
+  geom_line(data = life5060 %>% 
+              filter(country %in% c("United States", "Australia")))
+```
+
+```{r}
+plot(x = canada_fixed$year, y = canada_fixed$lifeExp, 
+     type = 'l', xlab = "year", ylab = "lifeExp")
+US = life5060[life5060$country == "United States", ]
+Mexico = life5060[life5060$country == "Australia", ]
+lines(x = US$year, y = US$lifeExp)
+lines(x = Australia$year, y = Australia$lifeExp)
+```
+#Stretch
+```{r, fig.width = 6}
+canada_fixed %>% 
+  ggplot(aes(x = year, y = lifeExp, colour=country)) + geom_line() +
+  geom_line(data = life5060 %>% 
+              filter(country %in% c("United States", "Australia")))
+```
