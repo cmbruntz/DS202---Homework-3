@@ -83,7 +83,7 @@ canada_fixed %>%
 plot(x = canada_fixed$year, y = canada_fixed$lifeExp, 
      type = 'l', xlab = "year", ylab = "lifeExp")
 US = life5060[life5060$country == "United States", ]
-Mexico = life5060[life5060$country == "Australia", ]
+Australia = life5060[life5060$country == "Australia", ]
 lines(x = US$year, y = US$lifeExp)
 lines(x = Australia$year, y = Australia$lifeExp)
 ```
